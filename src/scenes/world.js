@@ -23,11 +23,11 @@ export default async function world(k) {
 
   const layers = mapData.layers;
   for (const layer of layers) {
-    if (layer.name === "Boundaries") {
+    if (layer.name === "boundaries") {
       drawBoundaries(k, map, layer);
       continue;
     }
-    if (layer.name === "Spawnpoints") {
+    if (layer.name === "spawnpoints") {
       for (const object of layer.objects) {
         if (object.name === "player") {
           entities.player = k.add(
