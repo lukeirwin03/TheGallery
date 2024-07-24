@@ -5,7 +5,6 @@ import { colorizeBackground } from "../utils.js";
 export default function mainMenu(k) {
   const currentLanguage = gameState.getLanguage();
 
-  // colorizeBackground(k, 0, 0, 0);
   k.loadSprite("background", "../../assets/maps/gallery_main_menu.png");
 
   k.scene("mainMenu", () => {

@@ -28,44 +28,7 @@ k.loadSprite("assets", "./assets/maps/sprites/src/new_gallery_sprites.png", {
       to: 102,
       loop: true,
       speed:5,
-
     },
-  //   "player-down": {
-  //     from: 224,
-  //     to: 225,
-  //     loop: true,
-  //     speed:6,
-  // },
-  //   "player-idle-down": {
-  //     from: 224,
-  //     to: 225,
-  //     loop: true,s
-  //     speed:6,
-  // },
-  // "player-side": {
-  //     from: 226,
-  //     to: 227,
-  //     loop: true,
-  //     speed:6,
-  // },
-  // "player-idle-side": {
-  //     from: 226,
-  //     to: 227,
-  //     loop: true,
-  //     speed:6,
-  // },
-  // "player-up": {
-  //     from: 240,
-  //     to: 241,
-  //     loop: true,
-  //     speed:6,
-  // },
-  // "player-idle-up": {
-  //     from: 240,
-  //     to: 241,
-  //     loop: true,
-  //     speed:6,
-  // },
     "guide-idle-down": {
         from: 224,
         to: 225,
