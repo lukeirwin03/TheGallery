@@ -47,6 +47,13 @@ k.loadSprite("assets", "./assets/maps/sprites/src/new_gallery_sprites.png", {
         loop: true,
         speed:6,
     },
+    "pedestal": 123,
+    "raspi": 94,
+    "spotDetection": 110,
+    "cornhacks": 126,
+    "nnet": 95,
+    "twitterBot": 111,
+    "e_pacerr": 127,  
   },
 });
 

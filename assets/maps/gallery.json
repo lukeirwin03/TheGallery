@@ -188,6 +188,18 @@
                  "width":0,
                  "x":128,
                  "y":128
+                }, 
+                {
+                 "height":0,
+                 "id":19,
+                 "name":"raspi",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":208,
+                 "y":80
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -196,10 +208,10 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":19,
+ "nextobjectid":22,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"1.11.0",
  "tileheight":16,
  "tilesets":[
         {

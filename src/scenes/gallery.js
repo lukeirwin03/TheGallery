@@ -6,6 +6,8 @@ import {
   generateGuideComponents,
   startInteraction,
 } from "../entities/guide.js";
+import { generateExhibitComponents, startPedestalInteraction } from "../entities/exhibit.js";
+
 import {
   colorizeBackground,
   fetchMapData,
@@ -15,45 +17,52 @@ import {
 } from "../utils.js";
 
 export default async function house(k) {
-    colorizeBackground(k, 27, 29, 52);
-  
-    const mapData = await fetchMapData("./assets/maps/gallery.json");
-    const map = k.add([k.pos(520, 200)]);
-  
-    const entities = {
-      guide: null,
-      player: null,
-    };
-  
-    const layers = mapData.layers;
-    for (const layer of layers) {
-      if (layer.name === "boundaries") {
-        drawBoundaries(k, map, layer);
-        continue;
-      }
-  
-      if (layer.name === "spawnpoints") {
-        for (const object of layer.objects) {
-          if (object.name === "player") {
-            entities.player = map.add(
-              generatePlayerComponents(k, k.vec2(object.x, object.y))
-            );
-            continue;
-          }
-  
-          if (object.name === "guide") {
-            entities.guide = map.add(
-              generateGuideComponents(k, k.vec2(object.x, object.y))
-            );
-            continue;
-          }
-        }
-  
-        continue;
-      }
-  
-      drawTiles(k, map, layer, mapData.tileheight, mapData.tileheight);
+  colorizeBackground(k, 27, 29, 52);
+
+  const mapData = await fetchMapData("./assets/maps/gallery.json");
+  const map = k.add([k.pos(520, 200)]);
+
+  const entities = {
+    guide: null,
+    player: null,
+    exhibits: [],
+  };
+
+  const layers = mapData.layers;
+  for (const layer of layers) {
+    if (layer.name === "boundaries") {
+      drawBoundaries(k, map, layer);
+      continue;
     }
+
+    if (layer.name === "spawnpoints") {
+      for (const object of layer.objects) {
+        if (object.name === "player") {
+          entities.player = map.add(
+            generatePlayerComponents(k, k.vec2(object.x, object.y))
+          );
+          continue;
+        }
+
+        if (object.name === "guide") {
+          entities.guide = map.add(
+            generateGuideComponents(k, k.vec2(object.x, object.y))
+          );
+          continue;
+        }
+        else {
+          const [pedestal, project] = generateExhibitComponents(k, k.vec2(object.x, object.y), object.name);
+          entities.exhibits.push(pedestal);
+          entities.exhibits.push(project);
+          continue;
+        }
+      }
+
+      continue;
+    }
+
+    drawTiles(k, map, layer, mapData.tileheight, mapData.tileheight);
+  }
 
   k.camScale(3);
   k.camPos(entities.player.worldPos());
@@ -83,5 +92,12 @@ export default async function house(k) {
 
   entities.player.onCollideEnd("guide", () => {
     playAnimIfNotPlaying(entities.guide, "guide-idle-down");
+  });
+
+  entities.player.onCollide("pedestal", (pedestal) => {
+    const pedestalType = pedestal.type;
+    if (pedestalType) {
+      startPedestalInteraction(k, pedestalType);
+    }
   });
 }

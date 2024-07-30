@@ -7,6 +7,7 @@
     "expandedProjectPaths": [
         "."
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "gallery.json": {
             "expandedObjectLayers": [
@@ -15,7 +16,7 @@
             "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 276.66666666666663,
+                "x": 267.66666666666663,
                 "y": 256.3333333333333
             }
         },
@@ -24,13 +25,13 @@
         },
         "world.json": {
             "expandedObjectLayers": [
-                6
+                5
             ],
-            "scale": 3,
-            "selectedLayer": 5,
+            "scale": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 248,
-                "y": 202.5
+                "x": 115.75,
+                "y": 173.75
             }
         }
     },

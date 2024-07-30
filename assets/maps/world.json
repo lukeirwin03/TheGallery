@@ -61,6 +61,30 @@
                  "width":0,
                  "x":64,
                  "y":79.6666666666667
+                }, 
+                {
+                 "height":0,
+                 "id":70,
+                 "name":"raspi",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":128,
+                 "y":80
+                }, 
+                {
+                 "height":0,
+                 "id":71,
+                 "name":"cornhacks",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":110.5,
+                 "y":94.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -837,7 +861,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":70,
+ "nextobjectid":72,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -845,7 +869,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"./sprites/gallery_tiles.tsx"
+         "source":"sprites\/gallery_tiles.tsx"
         }],
  "tilewidth":16,
  "type":"map",

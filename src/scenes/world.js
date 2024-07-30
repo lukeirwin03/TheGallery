@@ -1,4 +1,4 @@
-import { generateFrogComponents } from "../entities/frog.js";
+import { generateExhibitComponents, startPedestalInteraction } from "../entities/exhibit.js";
 import {
   generatePlayerComponents,
   setPlayerMovement,
@@ -11,14 +11,14 @@ import {
 } from "../utils.js";
 
 export default async function world(k) {
-  colorizeBackground(k, 27, 29, 52);
+  colorizeBackground(k, 32, 0, 178);
   const mapData = await fetchMapData("./assets/maps/world.json");
 
   const map = k.add([k.pos(0, 0)]);
 
   const entities = {
     player: null,
-    frogs: [],
+    exhibits: [],
   };
 
   const layers = mapData.layers;
@@ -35,10 +35,11 @@ export default async function world(k) {
           );
           continue;
         }
-        if (object.name === "frog") {
-          entities.frogs.push(
-            k.add(generateFrogComponents(k, k.vec2(object.x, object.y)))
-          );
+        // add logic for the door before this else clause to make sure it gets rendered properly
+        else {
+          const [pedestal, project] = generateExhibitComponents(k, k.vec2(object.x, object.y), object.name);
+          entities.exhibits.push(pedestal);
+          entities.exhibits.push(project);
           continue;
         }
       }
@@ -64,6 +65,14 @@ export default async function world(k) {
   });
 
   setPlayerMovement(k, entities.player);
+
+  entities.player.onCollide("pedestal", (pedestal) => {
+    const pedestalType = pedestal.type;
+    console.log(pedestal.type);
+    if (pedestalType) {
+      startPedestalInteraction(k, pedestalType);
+    }
+  });
 
   entities.player.onCollide("door-entrance", () => {
     k.go("gallery");
