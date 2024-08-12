@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gallery</title>
+    <link rel="stylesheet" href="styles/global_styles.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div id="main-container">
+            <div id="top-container">
+                <div id="game-container"></div>
+            </div>
+            <div id="game-description">
+                <h1>About the Gallery</h1>
+                <p>
+                    The Gallery is a little "game" that I made as a passion project over the Summer of 2024.
+                    I really wanted to try making a game and I also wanted to make a portfolio site, so I
+                    had the idea of making The Gallery. All of the sprites and artwork are originals done by
+                    myself and the game was made using Kaboom.js.
+                </p>
+            </div>
+            <div id="featured-projects">
+                <h1>Projects Featured in The Gallery</h1>
+                
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <img src="assets/overlay.png" id="screen-overlay">
+    <script src="scripts/loadComponent.js"></script>
+    <script>
+        loadComponent('./components/header.html', 'header-placeholder');
+        loadComponent('./components/footer.html', 'footer-placeholder');
+    </script>
+    <script type="module" src="../src/main.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

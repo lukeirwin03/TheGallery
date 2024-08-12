@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Desktop</title>
+    <link rel="stylesheet" href="styles/experimental_styles.css">
+</head>
+
+<body>
+    <img src="assets/windowsxp.png" id="windows-desktop">
+
+    <main>
+        <div class="icon" onclick="openWindow('game-window')">
+            <img src="assets/icons/raspi.png" alt="raspi">
+            <div class="icon-label">Pi Server</div>
+        </div>
+        <div class="icon" onclick="openWindow('game-window')">
+            <img src="assets/icons/spotDetection.png" alt="spotDetection">
+            <div class="icon-label">Parking Spot Detection</div>
+        </div>
+        <div class="icon" onclick="openWindow('game-window')">
+            <img src="assets/icons/cornhacks.png" alt="cornhacks">
+            <div class="icon-label">Cornhacks 2024</div>
+        </div>
+        <div class="icon" onclick="openWindow('game-window')">
+            <img src="assets/icons/forg.png" alt="forg">
+            <div class="icon-label">Machine Learning</div>
+        </div>
+        <div class="icon" onclick="openWindow('game-window')">
+            <img src="assets/icons/twitterBot.png" alt="twitterBot">
+            <div class="icon-label">Twitter Bot</div>
+        </div>
+        <div class="icon" onclick="openWindow('game-window')">
+            <img src="assets/icons/e-pacerr.png" alt="e-pacerr">
+            <div class="icon-label">E-PACERR</div>
+        </div>
+
+        <div id="game-window" class="window">
+            <div class="title-bar">
+                The Gallery
+                <button class="close-button" onclick="closeWindow('game-window')">X</button>
+            </div>
+            <div class="content">
+                <div id="game-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Screen Overlay -->
+    <img src="assets/overlay.png" id="screen-overlay">
+
+    <script type="module" src="../src/main.js"></script>
+    <script src="scripts/draggable.js"></script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@ import {
 
 export default async function world(k) {
   colorizeBackground(k, 32, 0, 178);
-  const mapData = await fetchMapData("./assets/maps/world.json");
+  const mapData = await fetchMapData("../assets/maps/world.json");
 
   const map = k.add([k.pos(0, 0)]);
 

@@ -19,7 +19,7 @@ import {
 export default async function house(k) {
   colorizeBackground(k, 27, 29, 52);
 
-  const mapData = await fetchMapData("./assets/maps/gallery.json");
+  const mapData = await fetchMapData("../assets/maps/gallery.json");
   const map = k.add([k.pos(520, 200)]);
 
   const entities = {
