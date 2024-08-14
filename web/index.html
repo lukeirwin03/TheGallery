@@ -4,43 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gallery</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Desktop</title>
     <link rel="stylesheet" href="styles/global_styles.css">
 </head>
 
 <body>
-    <div id="header-placeholder"></div>
+    <img src="assets/windowsxp.png" id="windows-desktop">
 
     <main>
-        <div id="main-container">
-            <div id="top-container">
+        <a class="icon" target="_blank" href="https://google.com">
+            <img src="assets/icons/raspi.png" alt="raspi">
+            <div class="icon-label">Pi Server</div>
+        </a>
+        <a class="icon" target="_blank" href="https://github.com/lukeirwin03/ParkingSpotDetection">
+            <img src="assets/icons/spotDetection.png" alt="spotDetection">
+            <div class="icon-label">Parking Spot Detection</div>
+        </a>
+        <a class="icon" target="_blank" href="https://github.com/briantran140/Cornhack">
+            <img src="assets/icons/cornhacks.png" alt="cornhacks">
+            <div class="icon-label">Cornhacks 2024</div>
+        </a>
+        <a class="icon" target="_blank" href="https://github.com/lukeirwin03/Dino-NeuralNet">
+            <img src="assets/icons/forg.png" alt="forg">
+            <div class="icon-label">Dino-NeuralNet</div>
+        </a>
+        <a class="icon" target="_blank" href="https://github.com/lukeirwin03/TwitterBot-_Dexter_-">
+            <img src="assets/icons/twitterBot.png" alt="twitterBot">
+            <div class="icon-label">Twitter Bot</div>
+        </a>
+        <a class="icon" target="_blank" href="https://github.com/lukeirwin03/e-pacerr-website">
+            <img src="assets/icons/e-pacerr.png" alt="e-pacerr">
+            <div class="icon-label">E-PACERR</div>
+        </a>
+        <div class="icon" onclick="openWindow('about-window')">
+            <img src="assets/icons/about.png" alt="e-pacerr">
+            <div class="icon-label">About Me</div>
+        </div>
+        <div class="icon" onclick="openWindow('info-window')">
+            <img src="assets/icons/info.png" alt="e-pacerr">
+            <div class="icon-label">Gallery Info</div>
+        </div>
+
+        <div id="game-window" class="window">
+            <div class="title-bar">
+                The Gallery
+                <button class="close-button" onclick="closeWindow('game-window')">X</button>
+            </div>
+            <div class="content">
                 <div id="game-container"></div>
             </div>
-            <div id="game-description">
-                <h1>About the Gallery</h1>
-                <p>
-                    The Gallery is a little "game" that I made as a passion project over the Summer of 2024.
-                    I really wanted to try making a game and I also wanted to make a portfolio site, so I
-                    had the idea of making The Gallery. All of the sprites and artwork are originals done by
-                    myself and the game was made using Kaboom.js.
-                </p>
+        </div>
+        <div id="about-window" class="window" >
+            <div class="title-bar">
+                Luke Irwin
+                <button class="close-button" onclick="closeWindow('about-window')">X</button>
             </div>
-            <div id="featured-projects">
-                <h1>Projects Featured in The Gallery</h1>
-                
+        </div>
+        <div id="info-window" class="window">
+            <div class="title-bar">
+                Welcome to the Gallery
+                <button class="close-button" onclick="closeWindow('info-window')">X</button>
             </div>
+        </div>
+        <div id="hire-me-window" class="window">
+            <div class="title-bar">
+                A message from our sponsors...
+                <div class="content">
+                    <img src="https://images.cooltext.com/5704996.gif" width="280" height="91" alt="Hire Me" />
+                </div>
+                <button class="close-button" onclick="openWindow('about-window')">X</button>
         </div>
     </main>
 
-    <div id="footer-placeholder"></div>
     <img src="assets/overlay.png" id="screen-overlay">
     <script src="scripts/loadComponent.js"></script>
-    <script>
-        loadComponent('./components/header.html', 'header-placeholder');
-        loadComponent('./components/footer.html', 'footer-placeholder');
-    </script>
     <script type="module" src="../src/main.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts/window.js"></script>
 </body>
 
 </html>

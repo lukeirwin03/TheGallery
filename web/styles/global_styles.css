@@ -1,90 +1,23 @@
+:root {
+    --background-color: #d4d4d4c4;
+    --primary-color: #0076c5;
+    --secondary-color: #111;
+    --highlight-color: #dadada;
+    --text-color: white;
+    --shadow-color: rgba(0, 255, 0, 0.5);
+    --border-color: #000;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #000;
-    color: #00FF00; 
+    background-color: var(--background-color);
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
     cursor: url("../assets/cursor.png"), auto;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-#main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#top-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    background-color: #000;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow effect */
-}
-
-#game-container {
-    flex: 1;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: auto; 
-    max-height: 70vh; /* Ensures the height does not exceed 80% of the viewport height */
-    background-color: #000; /* Added background color to visualize the container */
-    border: 2px solid #00FF00; /* Green border for retro look */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow effect */
-    cursor: none;
-}
-
-#featured-projects {
-    width: 90%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#game-description{
-
-}
-
-
-.title {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.description {
-    text-align: center;
-    font-size: 1em;
-    padding: 10px;
-}
-
-#screen-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 1; 
-    z-index: 1000;
+    overflow-x: hidden;
 }
 
 #windows-desktop {
@@ -94,7 +27,131 @@ main {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    opacity: 1; /* Adjust the opacity for the effect */
+    opacity: 1;
     z-index: 1;
 }
 
+#screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .9;
+    z-index: 1000;
+    filter: brightness(1.5);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+    width: 20%;
+    height: 60%;
+}
+
+.icon {
+    text-decoration: none;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+.icon img {
+    width: 80%;
+    height: auto;
+}
+
+.icon-label {
+    font-weight: 800;
+    margin-top: 5px;
+    font-size: 1em;
+    color: var(--text-color);
+    text-shadow: 
+        -1px -1px 0 var(--border-color),
+         1px -1px 0 var(--border-color),
+        -1px  1px 0 var(--border-color),
+         1px  1px 0 var(--border-color);
+}
+
+.window {
+    position: absolute;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    cursor: url("../assets/cursor.png"), move;
+}
+
+.window .title-bar {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    cursor: url("../assets/move.png"), move;
+}
+
+.window .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--primary-color);
+    height: calc(100% - 60px); /* Adjusting for title bar */
+    overflow-y: hidden;
+}
+
+.window .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.2em;
+    color: var(--highlight-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 2px 5px;
+    width: 40px;
+    height: 30px;
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+#game-window {
+    width: 1300px;
+    height: 800px;
+    z-index: 101;
+    top: 2%;
+    left: 140%;
+}
+
+#about-window {
+    width: 600px;
+    height: 750px;
+    z-index: 100;
+    top: 500px;
+    left: 50px;
+}
+
+#hire-me-window {
+    width: 450px;
+    top: 100px;
+    top: 110%;
+    left: 320%;
+}
+
+#info-window {
+    width: 600px;
+    height:400px;
+    top: 97%;
+    left:160%;
+}

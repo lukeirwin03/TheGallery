@@ -46,4 +46,9 @@ function closeWindow(id) {
     if (windowElement) {
         windowElement.style.display = 'none';
     }
+
+function thisDoesNothing(){
+    
+}
+
 }
