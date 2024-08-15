@@ -76,11 +76,16 @@
                 <button class="close-button" onclick="openWindow('about-window')">X</button>
         </div>
     </main>
+    <div id="taskbar-container"></div>
 
     <img src="assets/overlay.png" id="screen-overlay">
-    <script src="scripts/loadComponent.js"></script>
     <script type="module" src="../src/main.js"></script>
     <script src="scripts/window.js"></script>
+    <script src="scripts/loadComponent.js"></script>
+    <script src="scripts/updateClock.js"></script>
+    <script>
+        loadComponent('components/taskbar.html', 'taskbar-container');
+    </script>
 </body>
 
 </html>

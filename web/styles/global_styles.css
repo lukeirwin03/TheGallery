@@ -6,6 +6,9 @@
     --text-color: white;
     --shadow-color: rgba(0, 255, 0, 0.5);
     --border-color: #000;
+    --taskbar-color: #3c3c3c; /* Default taskbar color */
+    --start-button-color: #1a73e8; /* Default start button color */
+    --icon-size: 24px; /* Default icon size */
 }
 
 body, html {
@@ -18,6 +21,7 @@ body, html {
     flex-direction: column;
     cursor: url("../assets/cursor.png"), auto;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #windows-desktop {
@@ -38,7 +42,7 @@ body, html {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    opacity: .9;
+    opacity: 1;
     z-index: 1000;
     filter: brightness(1.5);
 }
@@ -127,31 +131,94 @@ main {
 }
 
 #game-window {
-    width: 1300px;
-    height: 800px;
+    width: 1200px;
+    height: 720px;
     z-index: 101;
-    top: 2%;
-    left: 140%;
+    top: 3%;
+    left: 180%;
 }
 
 #about-window {
     width: 600px;
     height: 750px;
     z-index: 100;
-    top: 500px;
-    left: 50px;
+    top: 40%;
+    left: 26%;
 }
 
 #hire-me-window {
     width: 450px;
     top: 100px;
-    top: 110%;
-    left: 320%;
+    top: 105%;
+    left: 305%;
 }
 
 #info-window {
     width: 600px;
     height:400px;
-    top: 97%;
+    top: 90%;
     left:160%;
+}
+
+#taskbar {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--taskbar-color);
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 20px 25px;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#start-button {
+    width: 80px;
+    height: 100%;
+    background-color: var(--start-button-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#start-button img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+#quick-launch, #system-tray {
+    display: flex;
+    align-items: center;
+}
+
+#quick-launch img, #system-tray img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#taskbar-center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#system-tray {
+    display: flex;
+    align-items: center;
+}
+
+#clock {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
+    padding-right: 5px;
+    white-space: nowrap;
 }
