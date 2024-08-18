@@ -9,6 +9,8 @@
     --taskbar-color: #3c3c3c; /* Default taskbar color */
     --start-button-color: #1a73e8; /* Default start button color */
     --icon-size: 24px; /* Default icon size */
+    --aspect-ratio-game: calc(4 / 3); /* Adjust this as needed */
+    --aspect-ratio-info: calc(3 / 2);
 }
 
 body, html {
@@ -22,6 +24,7 @@ body, html {
     cursor: url("../assets/cursor.png"), auto;
     overflow-x: hidden;
     overflow-y: hidden;
+    filter: brightness(1.15);
 }
 
 #windows-desktop {
@@ -131,31 +134,45 @@ main {
 }
 
 #game-window {
-    width: 1200px;
-    height: 720px;
+    max-width: 1200px;
+    max-height:720px;
+    width: 50vw;
+    height: calc(50vw*.63);
+    min-width: 600px;
+    min-height:380px;
     z-index: 101;
     top: 3%;
     left: 180%;
 }
 
 #about-window {
-    width: 600px;
-    height: 750px;
+    max-width: 600px;
+    max-height: 750px;
+    width: 25vw;
+    height: calc(25vw*1.25);
+    min-width: 300px;
+    min-height: 375px;
     z-index: 100;
     top: 40%;
     left: 26%;
+    background-color: antiquewhite;
 }
 
 #hire-me-window {
-    width: 450px;
+    width: 400px;
     top: 100px;
     top: 105%;
     left: 305%;
+    cursor: url("../assets/pointer.png"), pointer;
 }
 
 #info-window {
-    width: 600px;
-    height:400px;
+    max-width: 600px;
+    max-height: 400px;
+    width: 30vw;
+    height:calc(30vw / 2);
+    min-width: 300px;
+    min-height:200px;
     top: 90%;
     left:160%;
 }

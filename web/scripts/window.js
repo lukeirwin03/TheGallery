@@ -47,8 +47,19 @@ function closeWindow(id) {
         windowElement.style.display = 'none';
     }
 
-function thisDoesNothing(){
-    
 }
 
-}
+// function adjustWindowSize() {
+//     const windows = document.querySelectorAll('.window');
+//     windows.forEach(win => {
+//         const width = win.clientWidth;
+//         const aspectRatio = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--aspect-ratio'));
+
+//         win.style.height = `${width / aspectRatio}px`;
+//         // win.style.left = `${(window.innerWidth - width) / 2}px`; // Center horizontally
+//         // win.style.top = `${(window.innerHeight - win.clientHeight) / 2}px`; // Center vertically
+//     });
+// }
+
+// window.addEventListener('resize', adjustWindowSize);
+// window.addEventListener('load', adjustWindowSize);

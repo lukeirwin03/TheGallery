@@ -68,10 +68,9 @@ for (const sceneName in scenes) {
 }
 
 const canvas = k.canvas;
-document.getElementById("game-container").appendChild(canvas);
-
-// canvas.width = 1200; // Set your desired height
-// canvas.height = 900;
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("game-container").appendChild(canvas);
+});
 
 k.go("mainMenu");
 
