@@ -141,8 +141,8 @@ main {
     min-width: 600px;
     min-height:380px;
     z-index: 101;
-    top: 3%;
-    left: 180%;
+    top: 5%;
+    left: 60%;
 }
 
 #about-window {
@@ -153,16 +153,16 @@ main {
     min-width: 300px;
     min-height: 375px;
     z-index: 100;
-    top: 40%;
-    left: 26%;
+    top: 10%;
+    left: 300%;
     background-color: antiquewhite;
 }
 
 #hire-me-window {
     width: 400px;
     top: 100px;
-    top: 105%;
-    left: 305%;
+    top: 95%;
+    left: 250%;
     cursor: url("../assets/pointer.png"), pointer;
 }
 
@@ -173,8 +173,8 @@ main {
     height:calc(30vw / 2);
     min-width: 300px;
     min-height:200px;
-    top: 90%;
-    left:160%;
+    top: 85%;
+    left:75%;
 }
 
 #taskbar {
