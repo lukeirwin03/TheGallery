@@ -13,7 +13,7 @@
     <img src="assets/windowsxp.png" id="windows-desktop">
 
     <main>
-        <a class="icon" target="_blank" href="https://google.com">
+        <a class="icon" target="_blank" href="https://github.com/lukeirwin03/Pi-Server">
             <img src="assets/icons/raspi.png" alt="raspi">
             <div class="icon-label">Pi Server</div>
         </a>
@@ -38,12 +38,12 @@
             <div class="icon-label">E-PACERR</div>
         </a>
         <div class="icon" onclick="openWindow('about-window')">
-            <img src="assets/icons/about.png" alt="e-pacerr">
+            <img src="assets/icons/about.png" alt="more info about me">
             <div class="icon-label">About Me</div>
         </div>
-        <div class="icon" onclick="openWindow('info-window')">
-            <img src="assets/icons/info.png" alt="e-pacerr">
-            <div class="icon-label">Gallery Info</div>
+        <div class="icon" onclick="openWindow('game-manual')">
+            <img src="assets/icons/info.png" alt="more info about the gallery">
+            <div class="icon-label">Game Manual</div>
         </div>
 
         <div id="game-window" class="window">
@@ -55,17 +55,40 @@
                 <div id="game-container"></div>
             </div>
         </div>
-        <div id="about-window" class="window" >
+        <div id="about-window" class="window">
             <div class="title-bar">
                 About Me
                 <button class="close-button" onclick="closeWindow('about-window')">X</button>
             </div>
             <div class="content">sdfsdf</div>
         </div>
-        <div id="info-window" class="window">
+        <div id="game-manual" class="window">
             <div class="title-bar">
-                Welcome to the Gallery
-                <button class="close-button" onclick="closeWindow('info-window')">X</button>
+                Game Manual
+                <button class="close-button" onclick="closeWindow('game-manual')">X</button>
+            </div>
+            <div class="content">
+                <h3 id="content-header">Welcome to the Gallery</h3>
+
+                <p id="content-description">
+                    The Gallery is a passion project that I made to showcase my programming abilities. The Gallery
+                    itself is a game made using Kaboom JS with all original artwork and sprites done by myself.
+                    Additionally, the character that you will be using in the game is my cat, Marcy.
+                </p>
+                <p id="content-description">
+                    The controls are pretty standard, you can use either WASD or the arrow keys to navigate. Please
+                    explore the map and check out the Gallery building to see my projects that I am showcasing. The
+                    source code is linked if you click on the icons on the desktop.
+                </p>
+                <p id="content-description">Please take a look around! I hope you get as much joy exploring around as I
+                    got from making this.</p>
+                <p id="content-description">Also check out me out on 
+                    <a target="_blank" id="link" href="https://github.com/lukeirwin03">GitHub</a> 
+                    and
+                    <a target="_blank" href="https://www.linkedin.com/in/lukemirwin/">LinkedIn</a>!
+                </p>
+                <p id="content-description"></p>br></p>
+
             </div>
         </div>
         <div id="hire-me-window" class="window">
@@ -75,7 +98,7 @@
                     <img src="https://images.cooltext.com/5704996.gif" width="280" height="91" alt="Hire Me" />
                 </div>
                 <button class="close-button" onclick="openWindow('about-window')">X</button>
-        </div>
+            </div>
     </main>
     <div id="taskbar-container"></div>
 

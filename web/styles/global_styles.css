@@ -6,7 +6,7 @@
     --text-color: white;
     --shadow-color: rgba(0, 255, 0, 0.5);
     --border-color: #000;
-    --taskbar-color: #3c3c3c; /* Default taskbar color */
+    --taskbar-color: #1247b9; /* Default taskbar color */
     --start-button-color: #1a73e8; /* Default start button color */
     --icon-size: 24px; /* Default icon size */
     --aspect-ratio-game: calc(4 / 3); /* Adjust this as needed */
@@ -111,10 +111,10 @@ main {
 
 .window .content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 10px;
-    color: var(--primary-color);
+    color: black;
     height: calc(100% - 60px); /* Adjusting for title bar */
     overflow-y: hidden;
 }
@@ -166,15 +166,44 @@ main {
     cursor: url("../assets/pointer.png"), pointer;
 }
 
-#info-window {
+#hire-me-window .content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#game-manual {
     max-width: 600px;
     max-height: 400px;
     width: 30vw;
-    height:calc(30vw / 2);
+    height: calc(30vw * 0.6); /* Adjusted height for a better proportion */
     min-width: 300px;
-    min-height:200px;
-    top: 85%;
-    left:75%;
+    min-height: 200px;
+    top: 92%;
+    left: 40%;
+    background-color: #FFFF99; /* Light yellow for Windows XP sticky note */
+    border: 2px solid #C0C0C0; /* Light grey border */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    overflow-y: auto;
+}
+
+#game-manual .title-bar {
+    background-color: #C0C0C0; /* Light grey for the title bar */
+    color: #000000; /* Black text for contrast */
+    border-bottom: 1px solid #808080; /* Slightly darker grey for the border */
+    position: sticky; /* Makes the title bar sticky */
+    top: 0; /* Sticks to the top of the window */
+}
+
+#game-manual .content {
+    font-size: 14pt;
+    padding: 150px 40px 40px 40px;
+}
+
+#game-manual #content-header {
+    width: 100%;
+    text-align: center;
 }
 
 #taskbar {
@@ -186,15 +215,16 @@ main {
     background-color: var(--taskbar-color);
     display: flex;
     align-items: center;
-    padding: 0px 0px 20px 25px;
+    padding: 0px 0px 18px 25px;
     z-index: 1000;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -2px 5px rgba(0, 153, 255, 0.5);
 }
 
 #start-button {
     width: 80px;
     height: 100%;
-    background-color: var(--start-button-color);
+    background-color: rgb(0, 118, 197);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,13 +259,19 @@ main {
 #system-tray {
     display: flex;
     align-items: center;
+    margin-left: 25px;
 }
 
 #clock {
+    display:flex;
+    height:100%;
+    align-items: center;
     color: white;
     font-family: Arial, sans-serif;
     font-size: 18px;
-    margin-left: 10px;
-    padding-right: 5px;
+    background-color: rgb(0, 118, 197);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
     white-space: nowrap;
+    margin-right: 50px;
+    padding: 0px 40px 0px 50px;
 }
