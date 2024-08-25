@@ -1,5 +1,9 @@
 function updateClock() {
     const clockElement = document.getElementById('clock');
+    if (!clockElement) {
+        console.error('Clock element not found');
+        return;
+    }
     const now = new Date();
     let hours = now.getHours();
     const minutes = now.getMinutes().toString().padStart(2, '0');
@@ -7,12 +11,11 @@ function updateClock() {
     
     // Convert to 12-hour format
     hours = hours % 12;
-    hours = hours ? hours : 12; // The hour '0' should be '12'
+    hours = hours ? hours : 12; 
     
     const timeString = `${hours}:${minutes} ${ampm}`;
-    clockElement.textContent = timeString;
+    clockElement.textContent = timeString ? timeString : '00:00';
 }
 
-// Update the clock every second
 setInterval(updateClock, 1000);
 updateClock(); // Initial call to display the time immediately

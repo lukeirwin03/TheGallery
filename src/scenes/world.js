@@ -21,6 +21,7 @@ export default async function world(k) {
     exhibits: [],
   };
 
+  
   const layers = mapData.layers;
   for (const layer of layers) {
     if (layer.name === "boundaries") {
@@ -30,12 +31,11 @@ export default async function world(k) {
     if (layer.name === "spawnpoints") {
       for (const object of layer.objects) {
         if (object.name === "player") {
-          entities.player = k.add(
+          entities.player = map.add(
             generatePlayerComponents(k, k.vec2(object.x, object.y))
           );
           continue;
         }
-        // add logic for the door before this else clause to make sure it gets rendered properly
         else {
           const [pedestal, project] = generateExhibitComponents(k, k.vec2(object.x, object.y), object.name);
           entities.exhibits.push(pedestal);
@@ -48,8 +48,10 @@ export default async function world(k) {
 
     drawTiles(k, map, layer, mapData.tileheight, mapData.tilewidth);
   }
+
   k.camScale(4);
   k.camPos(entities.player.worldPos());
+
   k.onUpdate(async () => {
     if (entities.player.pos.dist(k.camPos())) {
       await k.tween(
@@ -74,7 +76,4 @@ export default async function world(k) {
     }
   });
 
-  entities.player.onCollide("door-entrance", () => {
-    k.go("gallery");
-  });
 }
