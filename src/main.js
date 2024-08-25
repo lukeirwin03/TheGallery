@@ -54,6 +54,12 @@ k.loadSprite("assets", "../assets/maps/sprites/src/new_gallery_sprites.png", {
     "nnet": 95,
     "twitterBot": 111,
     "e_pacerr": 127,
+    "water-anim":{
+      from: 163,
+      to:167,
+      loop: true,
+      speed: 1,
+    }
   },
 });
 
