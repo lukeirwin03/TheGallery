@@ -1,0 +1,27 @@
+{
+  "name": "thegallery",
+  "version": "1.0.0",
+  "description": "A portfolio website, called The Gallery",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "http-server web",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukeirwin03/TheGallery.git"
+  },
+  "keywords": [],
+  "author": "Luke Irwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukeirwin03/TheGallery/issues"
+  },
+  "homepage": "https://github.com/lukeirwin03/TheGallery#readme",
+  "dependencies": {
+    "kaboom": "^3000.1.17"
+  }
+}

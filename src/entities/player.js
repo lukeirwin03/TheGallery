@@ -3,7 +3,7 @@ import { gameState } from "../state/stateManagers.js";
 
 export function generatePlayerComponents(k, pos) {
   return [
-    k.sprite("assets", {
+    k.sprite("game-assets", {
       anim: "player-idle-down",
     }),
     k.area({ shape: new k.Rect(k.vec2(3, 2), 10, 14) }),

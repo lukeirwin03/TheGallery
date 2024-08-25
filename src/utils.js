@@ -33,7 +33,7 @@ export function drawTiles(k, map, layer, tileheight, tilewidth) {
     if (tile === 0) continue;
 
     map.add([
-      k.sprite("assets", { frame: tile - 1 }),
+      k.sprite("game-assets", { frame: tile - 1 }),
       k.pos(tilePos),
       k.offscreen(),
     ]);

@@ -2,8 +2,8 @@ import k from "./kaboomContext.js";
 import mainMenu from "./scenes/mainMenu.js";
 import world from "./scenes/world.js";
 
-k.loadFont("gameboy", "../assets/gb.ttf");
-k.loadSprite("assets", "../assets/maps/sprites/src/new_gallery_sprites.png", {
+k.loadFont("gameboy", "../game-assets/gb.ttf");
+k.loadSprite("game-assets", "../game-assets/maps/sprites/src/new_gallery_sprites.png", {
   sliceX: 16,
   sliceY: 16,
   anims: {
