@@ -31,7 +31,7 @@ export default async function world(k) {
     if (layer.name === "spawnpoints") {
       for (const object of layer.objects) {
         if (object.name === "player") {
-          entities.player = k.add(
+          entities.player = map.add(
             generatePlayerComponents(k, k.vec2(object.x, object.y))
           );
           continue;
