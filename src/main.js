@@ -1,7 +1,6 @@
 import k from "./kaboomContext.js";
 import mainMenu from "./scenes/mainMenu.js";
 import world from "./scenes/world.js";
-import gallery from "./scenes/gallery.js";
 
 k.loadFont("gameboy", "../assets/gb.ttf");
 k.loadSprite("assets", "../assets/maps/sprites/src/new_gallery_sprites.png", {
@@ -66,7 +65,6 @@ k.loadSprite("assets", "../assets/maps/sprites/src/new_gallery_sprites.png", {
 const scenes = {
   mainMenu: mainMenu,
   world: world,
-  gallery: gallery,
 };
 
 for (const sceneName in scenes) {

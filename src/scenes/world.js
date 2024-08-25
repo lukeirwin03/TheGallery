@@ -76,7 +76,4 @@ export default async function world(k) {
     }
   });
 
-  entities.player.onCollide("door-entrance", () => {
-    k.go("gallery");
-  });
 }

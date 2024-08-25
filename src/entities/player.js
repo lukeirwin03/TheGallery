@@ -9,15 +9,10 @@ export function generatePlayerComponents(k, pos) {
     k.area({ shape: new k.Rect(k.vec2(3, 2), 10, 14) }),
     k.body(),
     k.pos(pos),
-    k.z(0), // Default z-index for the player
     k.opacity(),
     {
       speed: 80,
       direction: "down",
-      update() {
-        // Dynamically update the z-index based on the player's y-position
-        this.use(k.z(this.pos.y));
-      },
     },
     "player",
   ];
