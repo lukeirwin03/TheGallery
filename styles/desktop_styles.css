@@ -1,13 +1,31 @@
+body, html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
-    padding: 40px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between the grids */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px; /* Adjust padding as needed */
     z-index: 2;
-    width: 20%;
-    height: 60%;
+}
+
+#top-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 14px;
+}
+
+#bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 14px;
 }
 
 .icon {
@@ -22,7 +40,7 @@ main {
 }
 
 .icon img {
-    width: 80%;
+    width: 50%;
     height: auto;
 }
 
@@ -75,7 +93,7 @@ main {
 }
 
 #hire-me-window {
-    width: 400px;
+    max-width: 400px;
     top: 95%;
     left: 250%;
     cursor: url("../assets/pointer.png"), pointer;
@@ -125,11 +143,11 @@ main {
     bottom: 2px;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background-color: var(--taskbar-color);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px 0px 18px 18px;
     z-index: 1000;
     box-shadow: 0 -2px 5px rgba(0, 153, 255, 0.5);
     color: white;
@@ -139,7 +157,7 @@ main {
 
 #start-button {
     width: 180px;
-    height:110%;
+    height:100%;
     align-items: center;
     justify-content: center;
     color: white;
@@ -148,22 +166,15 @@ main {
     background-color: rgb(1, 165, 42);
     box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
     display: flex;
-    margin-right: 10px;
     border: none;
     cursor: url("../assets/pointer.png"), pointer;
     text-decoration: none;
 }
 
-#taskbar-center {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #download{
     height: 40%;
 }
+
 #clock {
     display: flex;
     height: 100%;
@@ -171,6 +182,5 @@ main {
     background-color: rgb(0, 118, 197);
     box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
     white-space: nowrap;
-    margin-right: 35px;
     padding: 0px 70px 0px 50px;
 }
