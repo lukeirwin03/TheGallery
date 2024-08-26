@@ -1,0 +1,78 @@
+@media (max-width: 768px) {
+    body, html {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: url("../assets/cursor.png"), auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        filter: brightness(1.15);
+    }
+    
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+        width: 90%;
+        gap: 50px;
+        height: auto;
+        padding: 20px;
+    }
+
+    #game-window {
+        display: none;
+        width: 80vw;
+        height: calc(50vw * var(--aspect-ratio-game));
+        min-width: unset;
+        min-height: unset;
+        top: 15%;
+        left: 10%;
+    }
+
+    #about-window {
+        width: 80vw;
+        height: 65vh;
+        max-height: 900px;
+        min-width: unset;
+        min-height: unset;
+        top: 5%;
+        left: 10%;
+    }
+
+    #hire-me-window {
+        /* display: none; */
+        width: 85vw;
+        max-width: 400px;
+        top: 140%;
+        left: 7%;
+    }
+
+    #game-manual {
+        display: none;
+        width: 80vw;
+        height: calc(80vw * var(--aspect-ratio-info));
+        min-width: unset;
+        min-height: unset;
+        top: 15%;
+        left: 10%;
+    }
+
+    #taskbar {
+        height: 70px;
+        padding: 0 5px;
+    }
+
+    #start-button {
+        width: 60%;
+        max-width: 250px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    #clock {
+        padding: 0 20px;
+        margin-right: 5px;
+    } 
+    #download{
+        height: 30%;
+    }
+}

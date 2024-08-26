@@ -1,0 +1,176 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+    width: 20%;
+    height: 60%;
+}
+
+.icon {
+    max-width: 120px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+.icon img {
+    width: 80%;
+    height: auto;
+}
+
+#windows-desktop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1;
+}
+
+#screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1000;
+    filter: brightness(1.5);
+}
+
+#game-window {
+    max-width: 1200px;
+    max-height:720px;
+    width: 50vw;
+    height: calc(50vw*.63);
+    min-width: 600px;
+    min-height:380px;
+    z-index: 101;
+    top: 5%;
+    left: 60%;
+}
+
+#about-window {
+    max-width: 600px;
+    max-height: 750px;
+    width: 25vw;
+    height: calc(25vw*1.25);
+    min-width: 300px;
+    min-height: 375px;
+    z-index: 100;
+    top: 10%;
+    left: 300%;
+    background-color: antiquewhite;
+}
+
+#hire-me-window {
+    width: 400px;
+    top: 95%;
+    left: 250%;
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+#hire-me-window .content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-manual {
+    max-width: 600px;
+    max-height: 400px;
+    width: 30vw;
+    height: calc(30vw * 0.6);
+    min-width: 300px;
+    min-height: 200px;
+    top: 92%;
+    left: 40%;
+    background-color: #FFFF99;
+    border: 2px solid #C0C0C0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+#game-manual .title-bar {
+    background-color: #C0C0C0;
+    color: #000000;
+    border-bottom: 1px solid #808080;
+    position: sticky;
+    top: 0;
+}
+
+#game-manual .content {
+    font-size: 14pt;
+    padding: 150px 40px 40px 40px;
+}
+
+#game-manual #content-header {
+    width: 100%;
+    text-align: center;
+}
+
+#taskbar {
+    position: fixed;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--taskbar-color);
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 18px 18px;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 153, 255, 0.5);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+#start-button {
+    width: 180px;
+    height:110%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background-color: rgb(1, 165, 42);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
+    display: flex;
+    margin-right: 10px;
+    border: none;
+    cursor: url("../assets/pointer.png"), pointer;
+    text-decoration: none;
+}
+
+#taskbar-center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#download{
+    height: 40%;
+}
+#clock {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background-color: rgb(0, 118, 197);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
+    white-space: nowrap;
+    margin-right: 35px;
+    padding: 0px 70px 0px 50px;
+}
