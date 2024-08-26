@@ -14,12 +14,19 @@
     --icon-size: 24px;
     --aspect-ratio-game: calc(4 / 3);
     --aspect-ratio-info: calc(3 / 2);
+    /* Base font size for scalability */
+    --base-font-size: 16px;
+}
+
+html {
+    font-size: var(--base-font-size); /* Set base font size */
 }
 
 body, html {
     margin: 0;
     padding: 0;
     font-family: "Times New Roman", Times, serif;
+    font-size: 1rem; /* Use rem to ensure consistency */
     height: 100vh;
     background-color: var(--background-color);
     color: var(--primary-color);
@@ -41,15 +48,10 @@ body, html {
     cursor: url("../assets/pointer.png"), pointer;
 }
 
-/* .icon img {
-    width: 80%;
-    height: auto;
-} */
-
 .icon-label {
     font-weight: 800;
-    margin-top: 5px;
-    font-size: 1em;
+    margin-top: 0.5rem; /* Adjust spacing */
+    font-size: 1rem; /* Use rem for consistency */
     color: var(--text-color);
     text-shadow: 
         -1px -1px 0 var(--border-color),
@@ -69,8 +71,8 @@ body, html {
 .window .title-bar {
     background-color: var(--highlight-color);
     color: var(--primary-color);
-    padding: 10px;
-    font-size: 1.2em;
+    padding: 0.625rem; /* Adjust padding */
+    font-size: 1.2rem; /* Use rem for consistency */
     font-weight: 800;
     text-align: center;
     border-bottom: 2px solid var(--primary-color);
@@ -81,23 +83,23 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    padding: 0.625rem; /* Adjust padding */
     color: black;
     height: calc(100% - 60px);
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scroll */
+    overflow-x: hidden; /* Disable horizontal scroll */
 }
 
 .window .close-button {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 1.2em;
+    top: 0.3125rem; /* Adjust position */
+    right: 0.3125rem; /* Adjust position */
+    font-size: 1.2rem; /* Use rem for consistency */
     color: var(--highlight-color);
     background-color: var(--primary-color);
     border: none;
-    padding: 2px 5px;
-    width: 40px;
-    height: 30px;
+    padding: 0.125rem 0.3125rem; /* Adjust padding */
+    width: 2.5rem; /* Adjust size */
+    height: 1.875rem; /* Adjust size */
     cursor: url("../assets/pointer.png"), pointer;
 }

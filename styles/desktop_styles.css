@@ -40,7 +40,7 @@ main {
 }
 
 .icon img {
-    width: 50%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -75,8 +75,8 @@ main {
     min-width: 600px;
     min-height:380px;
     z-index: 101;
-    top: 5%;
-    left: 60%;
+    top: 3vh;
+    left: 10vw;
 }
 
 #about-window {
@@ -87,15 +87,16 @@ main {
     min-width: 300px;
     min-height: 375px;
     z-index: 100;
-    top: 10%;
-    left: 300%;
+    top: 7vh;
+    left: 68vw;
     background-color: antiquewhite;
 }
 
 #hire-me-window {
     max-width: 400px;
-    top: 95%;
-    left: 250%;
+    min-width: 200px;
+    top: 65vh;
+    left: 70vw;
     cursor: url("../assets/pointer.png"), pointer;
 }
 
@@ -112,12 +113,12 @@ main {
     height: calc(30vw * 0.6);
     min-width: 300px;
     min-height: 200px;
-    top: 92%;
-    left: 40%;
+    top: 60vh;
+    left: 15vw;
     background-color: #FFFF99;
     border: 2px solid #C0C0C0;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
+    overflow: hidden; /* Prevent content overflow */
 }
 
 #game-manual .title-bar {
@@ -126,11 +127,17 @@ main {
     border-bottom: 1px solid #808080;
     position: sticky;
     top: 0;
+    padding: 10px; /* Adjust as needed */
+    z-index: 1;
 }
 
 #game-manual .content {
     font-size: 14pt;
-    padding: 150px 40px 40px 40px;
+    padding: 20px; /* Adjust padding for better spacing */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100% - 40px); /* Adjust height to fit within the window */
+    box-sizing: border-box; /* Include padding in height calculation */
+    padding-top: 280px; /* Ensure top padding so text isn't cut off */
 }
 
 #game-manual #content-header {
@@ -156,7 +163,7 @@ main {
 }
 
 #start-button {
-    width: 180px;
+    width: 14%;
     height:100%;
     align-items: center;
     justify-content: center;
@@ -176,6 +183,7 @@ main {
 }
 
 #clock {
+    width: 6%;
     display: flex;
     height: 100%;
     align-items: center;
