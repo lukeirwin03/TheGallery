@@ -39,7 +39,7 @@
     }
 
     #hire-me-window {
-        /* display: none; */
+        display: none;
         width: 85vw;
         max-width: 400px;
         top: 140%;
