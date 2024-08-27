@@ -74,7 +74,7 @@ main {
     height: calc(55vw*.63 + 20px);
     min-width: 600px;
     min-height:430px;
-    z-index: 101;
+    z-index: 100;
     top: 3vh;
     left: 10vw;
     overflow-y: hidden;
@@ -112,17 +112,20 @@ main {
 }
 
 #game-manual {
-    /* max-width: 600px;
-    max-height: 400px; */
     width: 30vw;
-    height: calc(30vw * 0.6);
+    height: auto; /* Adjusts height based on content */
     min-width: 300px;
+    max-width: 90vw; /* Max width to prevent it from being too wide on larger screens */
     min-height: 200px;
-    top: 60vh;
-    left: 15vw;
+    max-height: 90vh; /* Max height to prevent overflow on smaller screens */
+    top: 40vh;
+    left: 18vw;
     background-color: #FFFF99;
     border: 2px solid #C0C0C0;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    z-index: 101;
+    flex-direction: column;
     overflow: hidden; /* Prevent content overflow */
 }
 
@@ -130,24 +133,24 @@ main {
     background-color: #C0C0C0;
     color: #000000;
     border-bottom: 1px solid #808080;
-    position: sticky;
-    top: 0;
-    padding: 10px; /* Adjust as needed */
-    z-index: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem; /* Ensure consistent font size */
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 #game-manual .content {
-    font-size: 14pt;
-    padding: 20px; /* Adjust padding for better spacing */
-    overflow-y: auto; /* Enable vertical scrolling */
-    height: calc(100% - 40px); /* Adjust height to fit within the window */
-    box-sizing: border-box; /* Include padding in height calculation */
-    padding-top: 280px; /* Ensure top padding so text isn't cut off */
+    font-size: 1rem; /* Standardize font size */
+    padding: 10px; /* Adjust padding to fit content better */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    flex-grow: 1; /* Make content area expand to fill available space */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 #game-manual #content-header {
     width: 100%;
     text-align: center;
+    margin-bottom: 10px; /* Add margin for better spacing */
 }
 
 #taskbar {
