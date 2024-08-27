@@ -62,13 +62,14 @@
     }
 
     #start-button {
-        width: 60%;
+        width: 30%;
         max-width: 250px;
         font-size: 18px;
         text-decoration: none;
     }
 
     #clock {
+        width: 25%;
         padding: 0 20px;
         margin-right: 5px;
     } 
