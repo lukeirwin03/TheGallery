@@ -29,7 +29,8 @@ main {
 }
 
 .icon {
-    max-width: 120px;
+    max-width: 6em;
+    height: auto;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -68,10 +69,8 @@ main {
 }
 
 #game-window {
-    max-width: 1200px;
-    max-height:750px;
-    width: 50vw;
-    height: calc(50vw*.63 + 30px);
+    width: 55vw;
+    height: calc(55vw*.63 + 30px);
     min-width: 600px;
     min-height:430px;
     z-index: 101;
@@ -85,8 +84,8 @@ main {
 }
 
 #about-window {
-    max-width: 600px;
-    max-height: 750px;
+    /* max-width: 600px;
+    max-height: 750px; */
     width: 25vw;
     height: calc(25vw*1.25);
     min-width: 300px;
@@ -112,8 +111,8 @@ main {
 }
 
 #game-manual {
-    max-width: 600px;
-    max-height: 400px;
+    /* max-width: 600px;
+    max-height: 400px; */
     width: 30vw;
     height: calc(30vw * 0.6);
     min-width: 300px;
