@@ -12,7 +12,7 @@ export function isKeyDown(k, keys) {
 }
 
 export function colorizeBackground(k, r, g, b) {
-  k.add([k.rect(k.canvas.height, k.canvas.width), k.color(r, g, b), k.fixed()]);
+  k.add([k.rect(k.canvas.height*2, k.canvas.width*2), k.color(r, g, b), k.fixed()]);
 }
 
 export async function fetchMapData(mapPath) {
