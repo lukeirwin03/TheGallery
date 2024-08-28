@@ -12,7 +12,12 @@ export function isKeyDown(k, keys) {
 }
 
 export function colorizeBackground(k, r, g, b) {
-  k.add([k.rect(k.canvas.height*2, k.canvas.width*2), k.color(r, g, b), k.fixed()]);
+  k.add([
+    k.rect(k.width(), k.height()),  // Use k.width() and k.height() to match the canvas size
+    k.color(r, g, b),               // Apply the color
+    k.fixed(),                      // Keep it fixed to the background
+    k.pos(0, 0),                    // Position it at the top-left corner
+  ]);
 }
 
 export async function fetchMapData(mapPath) {
