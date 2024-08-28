@@ -71,7 +71,7 @@ main {
 
 #game-window {
     width: 55vw;
-    height: calc(55vw*.63 + 20px);
+    height: calc(55vw*.63);
     min-width: 600px;
     min-height:430px;
     z-index: 100;
@@ -85,9 +85,6 @@ main {
 }
 
 #about-window {
-    /* max-width: 600px;
-    max-height: 750px; */
-    width: 25vw;
     height: calc(25vw*1.25);
     min-width: 300px;
     min-height: 375px;
@@ -95,6 +92,18 @@ main {
     top: 7vh;
     left: 68vw;
     background-color: antiquewhite;
+}
+
+#about-window .title-bar {
+
+}
+
+#about-window .content {
+    font-size: 1rem; 
+    padding: 10px; 
+    overflow-y: auto; 
+    flex-grow: 1; 
+    box-sizing: border-box; 
 }
 
 #hire-me-window {
@@ -113,11 +122,11 @@ main {
 
 #game-manual {
     width: 30vw;
-    height: auto; /* Adjusts height based on content */
+    height: auto; 
     min-width: 300px;
-    max-width: 90vw; /* Max width to prevent it from being too wide on larger screens */
+    max-width: 90vw; 
     min-height: 200px;
-    max-height: 90vh; /* Max height to prevent overflow on smaller screens */
+    max-height: 90vh; 
     top: 40vh;
     left: 18vw;
     background-color: #FFFF99;
@@ -126,7 +135,7 @@ main {
     display: flex;
     z-index: 101;
     flex-direction: column;
-    overflow: hidden; /* Prevent content overflow */
+    overflow: hidden; 
 }
 
 #game-manual .title-bar {
@@ -134,23 +143,21 @@ main {
     color: #000000;
     border-bottom: 1px solid #808080;
     padding: 10px;
-    text-align: center;
-    font-size: 1rem; /* Ensure consistent font size */
-    flex-shrink: 0; /* Prevent shrinking */
+
 }
 
 #game-manual .content {
-    font-size: 1rem; /* Standardize font size */
-    padding: 10px; /* Adjust padding to fit content better */
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    flex-grow: 1; /* Make content area expand to fill available space */
-    box-sizing: border-box; /* Ensure padding is included in width/height */
+    font-size: 1rem; 
+    padding: 10px; 
+    overflow-y: auto; 
+    flex-grow: 1; 
+    box-sizing: border-box; 
 }
 
 #game-manual #content-header {
     width: 100%;
     text-align: center;
-    margin-bottom: 10px; /* Add margin for better spacing */
+    margin-bottom: 10px; 
 }
 
 #taskbar {

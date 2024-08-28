@@ -49,7 +49,7 @@ export default async function world(k) {
     drawTiles(k, map, layer, mapData.tileheight, mapData.tilewidth);
   }
 
-  k.camScale(4);
+  k.camScale(6);
   k.camPos(entities.player.worldPos());
 
   k.onUpdate(async () => {

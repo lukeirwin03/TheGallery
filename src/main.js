@@ -78,8 +78,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 k.go("mainMenu");
 
-// if (!document.getElementById("game-container")) {
-//   canvas.destroyAll();
-// } else {
-//   document.getElementById("game-container").appendChild(canvas);
-// }
