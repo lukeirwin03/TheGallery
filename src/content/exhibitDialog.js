@@ -1,47 +1,60 @@
 const raspi = {
     "english": [
-        ["raspi is my name",
-        "raspi is my game"]
+        ["The Home Server project is a containerized server built with C and",
+        "Python, designed to run on a Raspberry Pi. It allows remote access",
+        "via a TCP client, with the ability to perform various tasks. The",
+        "current implementaion has parking spot detection."]
     ],
     "spanish": []
 };
 
 const spotDetection = {
     "english": [
-        ["spotDetection is my name",
-        "spotDetection is my game"]
+        ["SpotDetection is part of the Home Server project, leveraging Docker and ",
+        "computer vision to monitor and report available parking spots.",
+        "This solution is open-source and can be easily deployed on", 
+        "a Raspberry Pi or other similar devices."]
     ],
     "spanish": []
 };
 
 const cornhacks = {
     "english": [
-        ["cornhacks is my name",
-        "cornhacks is my game"]
+        ["CornHacks is a hackathon I attended in 2024. The project my group made was",
+        "a website to connect college students to mental health resources",
+        "at their universities. I believe this project showcases my ability",
+        "to collaborate with others to rapidly prototype and deliver",
+        " a functional product in a competitive environment."]
     ],
     "spanish": []
 };
 
 const nnet = {
     "english": [
-        ["nnet is my name",
-        "nnet is my game"]
+        ["My Neural Network Frog Game is a Python-based project replicating",
+        "the Google Chrome 'Dino' game. It incorporates a neural network and",
+        "evolution algorithm to teach AI how to navigate the game, serving as a",
+        "practical demonstration of machine learning concepts."]
     ],
     "spanish": []
 };
 
 const twitterBot = {
     "english": [
-        ["twitterBot is my name",
-        "twitterBot is my game"]
+        ["The TwitterBot project uses Python and the Tweepy API to create a ",
+        "bot that generates AI-based responses to tweets. Leveraging",
+        "natural language processing, it engages with users by replying",
+        "to their tweets."]
     ],
     "spanish": []
 };
 
 const e_pacerr = {
     "english": [
-        ["e_pacerr is my name",
-        "e_pacerr is my game"]
+        ["The E-PACERR project involved developing and maintaining a website",
+        "for a bioinformatics research program at UNO. Built with ",
+        "accessibility in mind, the site is fully Section 508 compliant, ",
+        "ensuring it meets the needs of all users."]
     ],
     "spanish": []
 };
