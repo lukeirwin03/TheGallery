@@ -84,8 +84,10 @@ main {
     overflow-y: hidden;
 }
 
+
 #about-window {
     height: calc(25vw*1.25);
+    width: 25vw;
     min-width: 300px;
     min-height: 375px;
     z-index: 100;

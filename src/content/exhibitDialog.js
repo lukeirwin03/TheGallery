@@ -1,7 +1,7 @@
 const raspi = {
     "english": [
-        ["The Home Server project is a containerized server built with C and",
-        "Python, designed to run on a Raspberry Pi. It allows remote access",
+        ["My Home Server project is a containerized server built in C and",
+        "is designed to run on a Raspberry Pi. It allows remote access",
         "via a TCP client, with the ability to perform various tasks. The",
         "current implementaion has parking spot detection."]
     ],
@@ -10,10 +10,10 @@ const raspi = {
 
 const spotDetection = {
     "english": [
-        ["SpotDetection is part of the Home Server project, leveraging Docker and ",
-        "computer vision to monitor and report available parking spots.",
-        "This solution is open-source and can be easily deployed on", 
-        "a Raspberry Pi or other similar devices."]
+        ["This computer vision project is for parking spot detection and is",
+        "part of my Home Server project,it uses image processing to report ",
+        "available parking spots. This solution is open-source and can be ", 
+        "easily deployed on a Raspberry Pi or other similar devices."]
     ],
     "spanish": []
 };
@@ -41,7 +41,7 @@ const nnet = {
 
 const twitterBot = {
     "english": [
-        ["The TwitterBot project uses Python and the Tweepy API to create a ",
+        ["My Twitter Bot project uses Python and the Tweepy API to create a ",
         "bot that generates AI-based responses to tweets. Leveraging",
         "natural language processing, it engages with users by replying",
         "to their tweets."]
