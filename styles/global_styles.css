@@ -33,8 +33,8 @@ body, html {
     display: flex;
     flex-direction: column;
     cursor: url("../assets/cursor.png"), auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: clip;
+    overflow-y: clip;
     filter: brightness(1.15);
 }
 
@@ -104,4 +104,56 @@ body, html {
     width: 2.5rem; /* Adjust size */
     height: 1.875rem; /* Adjust size */
     cursor: url("../assets/pointer.png"), pointer;
+}
+
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 4px;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--taskbar-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 153, 255, 0.5);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+
+}
+
+#start-button {
+    width: 14%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: rgb(1, 165, 42);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
+    display: flex;
+    border: none;
+    cursor: url("../assets/pointer.png"), pointer;
+    text-decoration: none;
+    padding-left: 2em;
+    padding-right: 1em;
+}
+
+#download{
+    height: 50%;
+}
+
+#clock {
+    width: 6%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background-color: rgb(0, 118, 197);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
+    white-space: nowrap;
+    padding-left: 2em;
+    padding-right: 3.5em;
 }
