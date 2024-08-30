@@ -30,12 +30,14 @@
 
     #about-window {
         width: 80vw;
-        /* height: 65vh;
-        max-height: 1100px;
-        min-width: unset;
-        min-height: unset; */
+        height: 75vh;
         top: 5%;
         left: 10%;
+    }
+
+    #about-window .content {
+        padding: 10px; 
+        padding-top: 50vh;
     }
 
     #hire-me-window {

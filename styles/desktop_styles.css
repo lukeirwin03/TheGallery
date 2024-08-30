@@ -87,11 +87,8 @@ main {
 
 #about-window {
     width: 40vw; 
-    height: auto; 
-    min-width: 300px;
-    max-width: 800px; 
-    min-height: 375px;
-    max-height: 80rem; 
+    height: 60vh; 
+    max-width: 800px;
     top: 5vh; 
     left: 55vw; 
     background-color: antiquewhite;
@@ -99,8 +96,6 @@ main {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: scroll;
     z-index: 101;
 }
 
@@ -126,21 +121,18 @@ main {
 #about-window .content {
     font-size: 1rem;
     padding: 10px; 
+    padding-top: 50vh;
     overflow-y: scroll; 
-    box-sizing: border-box;
     color: #333;
     line-height: 1.5;
-    display: flex;
-    flex-wrap: wrap;
     align-items: flex-start; 
     max-height:80rem;
-
 }
 
 #about-window .content img {
     margin-right: 12px; 
     margin-bottom: 8px; 
-    max-width: 45%; 
+    max-width: 300px;
     height: auto;
 }
 
@@ -154,6 +146,7 @@ main {
     margin-bottom: 10px;
 }
 #img-container {
+    top: 30%;
     display: flex;
     justify-content: center;
     width: 100%;
