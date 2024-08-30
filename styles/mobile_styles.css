@@ -35,10 +35,10 @@
         left: 10%;
     }
 
-    #about-window .content {
+    /* #about-window .content {
         padding: 10px; 
-        padding-top: 50vh;
-    }
+        padding-top: 40%;
+    } */
 
     #hire-me-window {
         display: none;

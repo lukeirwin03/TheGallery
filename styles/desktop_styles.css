@@ -85,71 +85,90 @@ main {
 }
 
 
+/* Main window styles */
 #about-window {
-    width: 40vw; 
-    height: 60vh; 
-    max-width: 800px;
+    position: absolute;
+    width: 40vw; /* Base width */
+    min-width: 300px;
+    max-width: 90vw; /* Responsive maximum width */
+    height: auto; 
+    max-height: 80vh; /* Prevent window from exceeding 80% of viewport height */
     top: 5vh; 
     left: 55vw; 
     background-color: antiquewhite;
-    border: 2px solid #8b7b6f;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #8b7b6f; /* Retro border color */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Manage overflow within the content */
     z-index: 101;
 }
 
+/* Title bar */
 #about-window .title-bar {
     background-color: #8b7b6f;
     color: antiquewhite;
     border-bottom: 1px solid #5e4c3a;
     padding: 10px;
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; /* Space out title and close button */
     align-items: center;
+    cursor: move; /* Retro move cursor */
+    font-weight: bold;
 }
 
+/* Close button */
 #about-window .title-bar .close-button {
     background-color: antiquewhite;
     color: #8b7b6f;
-    border: none;
+    border: 1px solid #5e4c3a;
     cursor: pointer;
     font-weight: bold;
-    margin-left: auto; 
+    padding: 2px 8px;
+    margin: 0; /* No extra margin */
+    font-size: 0.9rem; /* Slightly smaller for a retro feel */
 }
 
+/* Window content */
 #about-window .content {
     font-size: 1rem;
-    padding: 10px; 
-    padding-top: 50vh;
-    overflow-y: scroll; 
+    padding: 10px;
+    overflow-y: auto; /* Allow scrolling only if needed */
+    overflow-x: hidden;
+    box-sizing: border-box;
     color: #333;
     line-height: 1.5;
-    align-items: flex-start; 
-    max-height:80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between elements */
+}
+
+/* Image container */
+#about-window .content #img-container {
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #about-window .content img {
-    margin-right: 12px; 
-    margin-bottom: 8px; 
-    max-width: 300px;
+    max-width: 300px; /* Restrict image width */
     height: auto;
+    border: 2px solid #8b7b6f; /* Retro border around image */
+    margin-right: 10px; 
 }
 
-#about-window .content p {
-    margin: 20px;
-}
-
+/* Header text */
 #about-window #content-header {
-    width: 100%;
     text-align: center;
     margin-bottom: 10px;
+    font-weight: bold;
 }
-#img-container {
-    top: 30%;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+
+/* Paragraph text */
+#about-window .content p {
+    margin: 0;
+    padding: 4px 0; 
 }
 #hire-me-window {
     max-width: 400px;
