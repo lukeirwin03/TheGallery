@@ -30,15 +30,20 @@
 
     #about-window {
         width: 80vw;
-        height: 75vh;
+        height: 85vh;
         top: 5%;
         left: 10%;
     }
 
-    /* #about-window .content {
+    #img-container {
+        margin-top: 20vh;
+    }
+
+    #about-window .content {
+        height: calc(120vh + 50px);
         padding: 10px; 
         padding-top: 40%;
-    } */
+    }
 
     #hire-me-window {
         display: none;
