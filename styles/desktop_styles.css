@@ -113,7 +113,6 @@ main {
     display: flex;
     justify-content: space-between; /* Space out title and close button */
     align-items: center;
-    cursor: move; /* Retro move cursor */
     font-weight: bold;
 }
 
