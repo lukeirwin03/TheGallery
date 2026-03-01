@@ -11,10 +11,14 @@ async function displayLine(textContainer, line) {
   }
 }
 
-export async function dialog(k, pos, content) {
+export async function dialog(k, content) {
   gameState.setFreezePlayer(true);
 
-  const dialogBox = k.add([k.rect(800, 200), k.pos(pos), k.fixed()]);
+  const centerX = k.width() / 2 - 400; // 400 is half of the dialog box width (800/2)
+  const centerY = k.height() / 1.5; // 100 is half of the dialog box height (200/2)
+
+
+  const dialogBox = k.add([k.rect(800, 200), k.pos(centerX, centerY), k.fixed()]);
   const textContainer = dialogBox.add([
     k.text("", {
       font: "gameboy",

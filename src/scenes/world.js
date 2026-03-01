@@ -12,7 +12,7 @@ import {
 
 export default async function world(k) {
   colorizeBackground(k, 32, 0, 178);
-  const mapData = await fetchMapData("../assets/maps/world.json");
+  const mapData = await fetchMapData("../game-assets/maps/world.json");
 
   const map = k.add([k.pos(0, 0)]);
 
@@ -49,7 +49,7 @@ export default async function world(k) {
     drawTiles(k, map, layer, mapData.tileheight, mapData.tilewidth);
   }
 
-  k.camScale(4);
+  k.camScale(6);
   k.camPos(entities.player.worldPos());
 
   k.onUpdate(async () => {

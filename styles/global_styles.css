@@ -1,0 +1,159 @@
+@import url('desktop_styles.css');
+@import url('mobile_styles.css');
+
+:root {
+    --background-color: #d4d4d4c4;
+    --primary-color: #0076c5;
+    --secondary-color: #111;
+    --highlight-color: #dadada;
+    --text-color: white;
+    --shadow-color: rgba(0, 255, 0, 0.5);
+    --border-color: #000;
+    --taskbar-color: #1247b9;
+    --start-button-color: #1a73e8;
+    --icon-size: 24px;
+    --aspect-ratio-game: calc(4 / 3);
+    --aspect-ratio-info: calc(3 / 2);
+    /* Base font size for scalability */
+    --base-font-size: 16px;
+}
+
+html {
+    font-size: var(--base-font-size); /* Set base font size */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2rem; /* Use rem to ensure consistency */
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    cursor: url("../assets/cursor.png"), auto;
+    overflow-x: clip;
+    overflow-y: clip;
+    filter: brightness(1.15);
+}
+
+.icon {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+.icon-label {
+    font-weight: 800;
+    margin-top: 0.5rem; /* Adjust spacing */
+    font-size: 1rem; /* Use rem for consistency */
+    color: var(--text-color);
+    text-shadow: 
+        -1px -1px 0 var(--border-color),
+         1px -1px 0 var(--border-color),
+        -1px  1px 0 var(--border-color),
+         1px  1px 0 var(--border-color);
+}
+
+.window {
+    position: absolute;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    cursor: url("../assets/cursor.png"), move;
+}
+
+.window .title-bar {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    padding: 0.625rem; /* Adjust padding */
+    font-size: 1.2rem; /* Use rem for consistency */
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    cursor: url("../assets/move.png"), move;
+
+}
+
+.window .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.625rem; /* Adjust padding */
+    color: black;
+    height: calc(100% - 60px);
+    overflow-y: auto; /* Enable vertical scroll */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    font-size: 1rem; 
+}
+
+.window .close-button {
+    position: absolute;
+    top: 0.3125rem; /* Adjust position */
+    right: 0.3125rem; /* Adjust position */
+    font-size: 1.2rem; /* Use rem for consistency */
+    color: var(--highlight-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.125rem 0.3125rem; /* Adjust padding */
+    width: 2.5rem; /* Adjust size */
+    height: 1.875rem; /* Adjust size */
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 4px;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--taskbar-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 153, 255, 0.5);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+
+}
+
+#start-button {
+    width: 14%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: rgb(1, 165, 42);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
+    display: flex;
+    border: none;
+    cursor: url("../assets/pointer.png"), pointer;
+    text-decoration: none;
+    padding-left: 2em;
+    padding-right: 1em;
+}
+
+#download{
+    height: 50%;
+}
+
+#clock {
+    width: 6%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background-color: rgb(0, 118, 197);
+    box-shadow: 0 -2px 5px rgba(169, 221, 255, 0.5);
+    white-space: nowrap;
+    padding-left: 2em;
+    padding-right: 3.5em;
+}

@@ -1,13 +1,35 @@
 {
+  "name": "thegallery",
+  "version": "1.0.0",
+  "description": "A portfolio website, called The Gallery",
   "private": true,
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "http-server .",
+    "lint": "eslint .",
+    "validate:html": "html-validate index.html components/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukeirwin03/TheGallery.git"
+  },
+  "keywords": [],
+  "author": "Luke Irwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukeirwin03/TheGallery/issues"
+  },
+  "homepage": "https://github.com/lukeirwin03/TheGallery#readme",
+  "dependencies": {
+    "kaboom": "^3000.1.17"
+  },
   "devDependencies": {
     "eslint": "^9.0.0",
     "@eslint/js": "^9.0.0",
     "globals": "^15.0.0",
     "html-validate": "^8.0.0"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "validate:html": "html-validate 'web/**/*.html'"
   }
 }

@@ -1,0 +1,227 @@
+body, html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 14px;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+    width: 30%;
+    height: 60%;
+}
+
+#top-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 14px;
+}
+
+#bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 14px;
+}
+
+.icon {
+    max-width: 6em;
+    height: auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+.icon img {
+    max-width: 80%;
+    height: auto;
+}
+
+#windows-desktop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1;
+}
+
+#screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1000;
+    filter: brightness(1.5);
+}
+
+#game-window {
+    width: 55vw;
+    height: calc(55vw*.63);
+    min-width: 600px;
+    min-height:430px;
+    z-index: 100;
+    top: 3vh;
+    left: 10vw;
+    overflow-y: hidden;
+}
+
+#game-window > * {
+    overflow-y: hidden;
+}
+
+
+/* Main window styles */
+#about-window {
+    position: absolute;
+    width: 40vw; /* Base width */
+    min-width: 300px;
+    max-width: 90vw; /* Responsive maximum width */
+    height: auto; 
+    max-height: 80vh; /* Prevent window from exceeding 80% of viewport height */
+    top: 5vh; 
+    left: 55vw; 
+    background-color: antiquewhite;
+    border: 2px solid #8b7b6f; /* Retro border color */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Manage overflow within the content */
+    z-index: 101;
+}
+
+/* Title bar */
+#about-window .title-bar {
+    background-color: #8b7b6f;
+    color: antiquewhite;
+    border-bottom: 1px solid #5e4c3a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space out title and close button */
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Close button */
+#about-window .title-bar .close-button {
+    background-color: antiquewhite;
+    color: #8b7b6f;
+    border: 1px solid #5e4c3a;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 2px 8px;
+    margin: 0; /* No extra margin */
+    font-size: 0.9rem; /* Slightly smaller for a retro feel */
+}
+
+/* Window content */
+#about-window .content {
+    font-size: 1rem;
+    padding: 10px;
+    overflow-y: auto; /* Allow scrolling only if needed */
+    overflow-x: hidden;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between elements */
+}
+
+/* Image container */
+#about-window .content #img-container {
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#about-window .content img {
+    max-width: 300px; /* Restrict image width */
+    width: 60%;
+    height: auto;
+    border: 2px solid #8b7b6f; /* Retro border around image */
+    margin-right: 10px; 
+}
+
+/* Header text */
+#about-window .content-header {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Paragraph text */
+#about-window .content p {
+    margin: 0;
+    padding: 4px 0; 
+}
+#hire-me-window {
+    max-width: 400px;
+    min-width: 200px;
+    top: 65vh;
+    left: 70vw;
+    cursor: url("../assets/pointer.png"), pointer;
+}
+
+#hire-me-window .content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+
+}
+
+#game-manual {
+    width: 30vw;
+    height: auto; 
+    min-width: 300px;
+    max-width: 90vw; 
+    min-height: 200px;
+    max-height: 90vh; 
+    top: 40vh;
+    left: 18vw;
+    background-color: #FFFF99;
+    border: 2px solid #C0C0C0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    z-index: 101;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+#game-manual .title-bar {
+    background-color: #C0C0C0;
+    color: #000000;
+    border-bottom: 1px solid #808080;
+    padding: 10px;
+
+}
+
+#game-manual .content {
+    font-size: 1rem; 
+    padding: 10px; 
+    overflow-y: auto; 
+    flex-grow: 1; 
+    box-sizing: border-box; 
+}
+
+#game-manual .content-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; 
+}

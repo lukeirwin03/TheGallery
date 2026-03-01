@@ -5,9 +5,9 @@ const english = {
 };
 
 const spanish = {
-  title: "",
-  languageIndication: "",
-  playIndication: "",
+  title: "Bienvenido a\nLa Galeria",
+  languageIndication: "Presiona `F` para cambiar de idioma",
+  playIndication: "Presiona `Enter` para comenzar",
 };
 
 const menuText = {

@@ -3,7 +3,7 @@ import { gameState } from "../state/stateManagers.js";
 
 
 export default function mainMenu(k) {
-  k.loadSprite("background", "../../assets/maps/gallery_main_menu.png");
+  k.loadSprite("background", "../../game-assets/maps/gallery_main_menu.png");
 
   k.scene("mainMenu", () => {
     const currentLanguage = gameState.getLanguage();
@@ -14,20 +14,20 @@ export default function mainMenu(k) {
     ]);
 
     k.add([
-      k.text(menuText[currentLanguage].title, { size: 56, font: "gameboy" }),
+      k.text(menuText[currentLanguage].title, { size: 72, font: "gameboy" }),
       k.area(),
       k.anchor("center"),
-      k.pos(k.center().x, k.center().y - 100),
+      k.pos(k.center().x, k.center().y - 150),
     ]);
 
     const languageText = k.add([
       k.text(menuText[currentLanguage].languageIndication, {
-        size: 14,
+        size: 24,
         font: "gameboy",
       }),
       k.area(),
       k.anchor("center"),
-      k.pos(k.center().x, k.center().y + 110),
+      k.pos(k.center().x, k.center().y + 50),
     ]);
 
     languageText.onUpdate(() => {
@@ -37,12 +37,12 @@ export default function mainMenu(k) {
 
     const playText = k.add([
       k.text(menuText[currentLanguage].playIndication, {
-        size: 24,
+        size: 32,
         font: "gameboy",
       }),
       k.area(),
       k.anchor("center"),
-      k.pos(k.center().x, k.center().y + 145),
+      k.pos(k.center().x, k.center().y + 90),
     ]);
 
     playText.onUpdate(() => {

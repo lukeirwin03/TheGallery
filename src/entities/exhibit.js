@@ -6,7 +6,7 @@ import { gameState } from "../state/stateManagers.js";
 // Function to generate the pedestal components
 export function generateExhibitComponents(k, pos, project) {
   const pedestal = k.add([
-    k.sprite("assets", {
+    k.sprite("game-assets", {
       anim: "pedestal",
     }),
     k.area({shape: new k.Rect(k.vec2(3, 2), 10, 14)}),
@@ -19,7 +19,7 @@ export function generateExhibitComponents(k, pos, project) {
   ]);
 
   const floatingObject = k.add([
-    k.sprite("assets", {
+    k.sprite("game-assets", {
       anim: project, 
     }),
     k.area(),
@@ -42,5 +42,5 @@ export function generateExhibitComponents(k, pos, project) {
 
 export async function startPedestalInteraction(k, type) {
   const responses = exhibitLines[type][gameState.getLanguage()];
-  dialog(k, k.vec2(250, 500), responses[0]);
+  dialog(k, responses[0]);
 }

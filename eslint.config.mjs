@@ -20,7 +20,7 @@ export default [
     },
   },
   {
-    files: ["web/scripts/**/*.js"],
+    files: ["scripts/**/*.js"],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "script",

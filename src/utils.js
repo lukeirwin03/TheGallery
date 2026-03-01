@@ -12,7 +12,12 @@ export function isKeyDown(k, keys) {
 }
 
 export function colorizeBackground(k, r, g, b) {
-  k.add([k.rect(k.canvas.height, k.canvas.width), k.color(r, g, b), k.fixed()]);
+  k.add([
+    k.rect(k.width(), k.height()),  // Use k.width() and k.height() to match the canvas size
+    k.color(r, g, b),               // Apply the color
+    k.fixed(),                      // Keep it fixed to the background
+    k.pos(0, 0),                    // Position it at the top-left corner
+  ]);
 }
 
 export async function fetchMapData(mapPath) {
@@ -33,7 +38,7 @@ export function drawTiles(k, map, layer, tileheight, tilewidth) {
     if (tile === 0) continue;
 
     map.add([
-      k.sprite("assets", { frame: tile - 1 }),
+      k.sprite("game-assets", { frame: tile - 1 }),
       k.pos(tilePos),
       k.offscreen(),
     ]);

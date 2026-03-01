@@ -25,4 +25,4 @@ jobs:
         run: npm ci
 
       - name: Validate HTML
-        run: npx html-validate 'web/**/*.html'
+        run: npx html-validate index.html components/
