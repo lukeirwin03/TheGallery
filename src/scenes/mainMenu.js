@@ -1,6 +1,6 @@
 import menuText from "../content/menuText.js";
 import { gameState } from "../state/stateManagers.js";
-import { colorizeBackground } from "../utils.js";
+
 
 export default function mainMenu(k) {
   k.loadSprite("background", "../../assets/maps/gallery_main_menu.png");
