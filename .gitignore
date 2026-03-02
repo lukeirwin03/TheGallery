@@ -1,1 +1,19 @@
+# Dependencies
 node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archives
+*.tar
+*.zip
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.*

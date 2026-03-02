@@ -9,8 +9,8 @@
   },
   "scripts": {
     "start": "http-server .",
-    "lint": "eslint .",
-    "validate:html": "html-validate index.html components/"
+    "lint": "eslint --config config/eslint.config.mjs .",
+    "validate:html": "html-validate -c config/.htmlvalidate.json index.html components/"
   },
   "repository": {
     "type": "git",
